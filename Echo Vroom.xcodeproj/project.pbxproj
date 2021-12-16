@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41019094276AFAA900F1688E /* SporthAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41019093276AFAA900F1688E /* SporthAudioKit */; };
+		4107F4B5276AFC1E00A71E07 /* STKAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4107F4B4276AFC1E00A71E07 /* STKAudioKit */; };
+		41297BB4276AF6FC005AF67F /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41297BB3276AF6FC005AF67F /* AudioKit */; };
+		41297BB7276AF709005AF67F /* DunneAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41297BB6276AF709005AF67F /* DunneAudioKit */; };
+		41297BBA276AF71D005AF67F /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41297BB9276AF71D005AF67F /* SoundpipeAudioKit */; };
+		41D33CD525776B9100BD7ED5 /* Echo_VroomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D33CD425776B9100BD7ED5 /* Echo_VroomApp.swift */; };
+		41D33CD725776B9100BD7ED5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D33CD625776B9100BD7ED5 /* ContentView.swift */; };
+		41D33CD925776B9300BD7ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D33CD825776B9300BD7ED5 /* Assets.xcassets */; };
+		41D33CDC25776B9300BD7ED5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D33CDB25776B9300BD7ED5 /* Preview Assets.xcassets */; };
+		41D33CEB25776C8500BD7ED5 /* Pictures in Resources */ = {isa = PBXBuildFile; fileRef = 41D33CE925776C8500BD7ED5 /* Pictures */; };
+		41D33CEC25776C8500BD7ED5 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 41D33CEA25776C8500BD7ED5 /* Sounds */; };
+		41D33CEF25776CB900BD7ED5 /* RecorderConductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D33CEE25776CB900BD7ED5 /* RecorderConductor.swift */; };
+		41D33CF925776D5100BD7ED5 /* ParameterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D33CF225776D5100BD7ED5 /* ParameterSlider.swift */; };
+		41D33CFA25776D5100BD7ED5 /* Cookbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D33CF325776D5100BD7ED5 /* Cookbook.swift */; };
+		41D33CFB25776D5100BD7ED5 /* PlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D33CF425776D5100BD7ED5 /* PlayerControls.swift */; };
+		41D33CFF25776D5100BD7ED5 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D33CF825776D5100BD7ED5 /* ColorManager.swift */; };
+		41D33D0625776ED200BD7ED5 /* LaunchScreen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 41D33D0525776EA600BD7ED5 /* LaunchScreen.storyboard */; };
+		41D4883B257C61500087A0A6 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4883A257C61500087A0A6 /* MotionManager.swift */; };
+		41D4883E257C77150087A0A6 /* MotionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4883D257C77150087A0A6 /* MotionProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		41D33CD125776B9100BD7ED5 /* Echo Vroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Echo Vroom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D33CD425776B9100BD7ED5 /* Echo_VroomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Echo_VroomApp.swift; sourceTree = "<group>"; };
+		41D33CD625776B9100BD7ED5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		41D33CD825776B9300BD7ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41D33CDB25776B9300BD7ED5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41D33CDD25776B9300BD7ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41D33CE925776C8500BD7ED5 /* Pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pictures; path = "Echo Vroom/Pictures"; sourceTree = "<group>"; };
+		41D33CEA25776C8500BD7ED5 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "Echo Vroom/Sounds"; sourceTree = "<group>"; };
+		41D33CEE25776CB900BD7ED5 /* RecorderConductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderConductor.swift; sourceTree = "<group>"; };
+		41D33CF225776D5100BD7ED5 /* ParameterSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterSlider.swift; sourceTree = "<group>"; };
+		41D33CF325776D5100BD7ED5 /* Cookbook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookbook.swift; sourceTree = "<group>"; };
+		41D33CF425776D5100BD7ED5 /* PlayerControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerControls.swift; sourceTree = "<group>"; };
+		41D33CF825776D5100BD7ED5 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		41D33D0525776EA600BD7ED5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41D4883A257C61500087A0A6 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		41D4883D257C77150087A0A6 /* MotionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41D33CCE25776B9100BD7ED5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4107F4B5276AFC1E00A71E07 /* STKAudioKit in Frameworks */,
+				41019094276AFAA900F1688E /* SporthAudioKit in Frameworks */,
+				41297BB4276AF6FC005AF67F /* AudioKit in Frameworks */,
+				41297BB7276AF709005AF67F /* DunneAudioKit in Frameworks */,
+				41297BBA276AF71D005AF67F /* SoundpipeAudioKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41D33CC825776B9100BD7ED5 = {
+			isa = PBXGroup;
+			children = (
+				41D33CE925776C8500BD7ED5 /* Pictures */,
+				41D33CEA25776C8500BD7ED5 /* Sounds */,
+				41D33CD325776B9100BD7ED5 /* Echo Vroom */,
+				41D33CD225776B9100BD7ED5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41D33CD225776B9100BD7ED5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41D33CD125776B9100BD7ED5 /* Echo Vroom.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41D33CD325776B9100BD7ED5 /* Echo Vroom */ = {
+			isa = PBXGroup;
+			children = (
+				41D33D0525776EA600BD7ED5 /* LaunchScreen.storyboard */,
+				41D33CF125776D5100BD7ED5 /* Reusable Components */,
+				41D33CEE25776CB900BD7ED5 /* RecorderConductor.swift */,
+				41D33CD425776B9100BD7ED5 /* Echo_VroomApp.swift */,
+				41D33CD625776B9100BD7ED5 /* ContentView.swift */,
+				41D4883D257C77150087A0A6 /* MotionProvider.swift */,
+				41D4883A257C61500087A0A6 /* MotionManager.swift */,
+				41D33CD825776B9300BD7ED5 /* Assets.xcassets */,
+				41D33CDD25776B9300BD7ED5 /* Info.plist */,
+				41D33CDA25776B9300BD7ED5 /* Preview Content */,
+			);
+			path = "Echo Vroom";
+			sourceTree = "<group>";
+		};
+		41D33CDA25776B9300BD7ED5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				41D33CDB25776B9300BD7ED5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		41D33CF125776D5100BD7ED5 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				41D33CF225776D5100BD7ED5 /* ParameterSlider.swift */,
+				41D33CF325776D5100BD7ED5 /* Cookbook.swift */,
+				41D33CF425776D5100BD7ED5 /* PlayerControls.swift */,
+				41D33CF825776D5100BD7ED5 /* ColorManager.swift */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41D33CD025776B9100BD7ED5 /* Echo Vroom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41D33CE025776B9300BD7ED5 /* Build configuration list for PBXNativeTarget "Echo Vroom" */;
+			buildPhases = (
+				41D33CCD25776B9100BD7ED5 /* Sources */,
+				41D33CCE25776B9100BD7ED5 /* Frameworks */,
+				41D33CCF25776B9100BD7ED5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Echo Vroom";
+			packageProductDependencies = (
+				41297BB3276AF6FC005AF67F /* AudioKit */,
+				41297BB6276AF709005AF67F /* DunneAudioKit */,
+				41297BB9276AF71D005AF67F /* SoundpipeAudioKit */,
+				41019093276AFAA900F1688E /* SporthAudioKit */,
+				4107F4B4276AFC1E00A71E07 /* STKAudioKit */,
+			);
+			productName = "Echo Vroom";
+			productReference = 41D33CD125776B9100BD7ED5 /* Echo Vroom.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41D33CC925776B9100BD7ED5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					41D33CD025776B9100BD7ED5 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 41D33CCC25776B9100BD7ED5 /* Build configuration list for PBXProject "Echo Vroom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 41D33CC825776B9100BD7ED5;
+			packageReferences = (
+				41297BB2276AF6FC005AF67F /* XCRemoteSwiftPackageReference "AudioKit" */,
+				41297BB5276AF709005AF67F /* XCRemoteSwiftPackageReference "DunneAudioKit" */,
+				41297BB8276AF71D005AF67F /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				41019091276AFA9500F1688E /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+				41019092276AFAA900F1688E /* XCRemoteSwiftPackageReference "SporthAudioKit" */,
+				4107F4B3276AFC1E00A71E07 /* XCRemoteSwiftPackageReference "STKAudioKit" */,
+			);
+			productRefGroup = 41D33CD225776B9100BD7ED5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41D33CD025776B9100BD7ED5 /* Echo Vroom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41D33CCF25776B9100BD7ED5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D33CEB25776C8500BD7ED5 /* Pictures in Resources */,
+				41D33CDC25776B9300BD7ED5 /* Preview Assets.xcassets in Resources */,
+				41D33CEC25776C8500BD7ED5 /* Sounds in Resources */,
+				41D33CD925776B9300BD7ED5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41D33CCD25776B9100BD7ED5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D33CF925776D5100BD7ED5 /* ParameterSlider.swift in Sources */,
+				41D33CFF25776D5100BD7ED5 /* ColorManager.swift in Sources */,
+				41D33CFA25776D5100BD7ED5 /* Cookbook.swift in Sources */,
+				41D4883E257C77150087A0A6 /* MotionProvider.swift in Sources */,
+				41D33CFB25776D5100BD7ED5 /* PlayerControls.swift in Sources */,
+				41D33CD725776B9100BD7ED5 /* ContentView.swift in Sources */,
+				41D4883B257C61500087A0A6 /* MotionManager.swift in Sources */,
+				41D33CD525776B9100BD7ED5 /* Echo_VroomApp.swift in Sources */,
+				41D33CEF25776CB900BD7ED5 /* RecorderConductor.swift in Sources */,
+				41D33D0625776ED200BD7ED5 /* LaunchScreen.storyboard in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		41D33CDE25776B9300BD7ED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		41D33CDF25776B9300BD7ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41D33CE125776B9300BD7ED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Echo Vroom/Preview Content\"";
+				DEVELOPMENT_TEAM = V9DBGV72NL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Echo Vroom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = studio.irl.echovroom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41D33CE225776B9300BD7ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Echo Vroom/Preview Content\"";
+				DEVELOPMENT_TEAM = V9DBGV72NL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Echo Vroom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = studio.irl.echovroom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41D33CCC25776B9100BD7ED5 /* Build configuration list for PBXProject "Echo Vroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D33CDE25776B9300BD7ED5 /* Debug */,
+				41D33CDF25776B9300BD7ED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41D33CE025776B9300BD7ED5 /* Build configuration list for PBXNativeTarget "Echo Vroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D33CE125776B9300BD7ED5 /* Debug */,
+				41D33CE225776B9300BD7ED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41019091276AFA9500F1688E /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		41019092276AFAA900F1688E /* XCRemoteSwiftPackageReference "SporthAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SporthAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		4107F4B3276AFC1E00A71E07 /* XCRemoteSwiftPackageReference "STKAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/STKAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		41297BB2276AF6FC005AF67F /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		41297BB5276AF709005AF67F /* XCRemoteSwiftPackageReference "DunneAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/DunneAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		41297BB8276AF71D005AF67F /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SoundpipeAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41019093276AFAA900F1688E /* SporthAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41019092276AFAA900F1688E /* XCRemoteSwiftPackageReference "SporthAudioKit" */;
+			productName = SporthAudioKit;
+		};
+		4107F4B4276AFC1E00A71E07 /* STKAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4107F4B3276AFC1E00A71E07 /* XCRemoteSwiftPackageReference "STKAudioKit" */;
+			productName = STKAudioKit;
+		};
+		41297BB3276AF6FC005AF67F /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41297BB2276AF6FC005AF67F /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		41297BB6276AF709005AF67F /* DunneAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41297BB5276AF709005AF67F /* XCRemoteSwiftPackageReference "DunneAudioKit" */;
+			productName = DunneAudioKit;
+		};
+		41297BB9276AF71D005AF67F /* SoundpipeAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41297BB8276AF71D005AF67F /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
+			productName = SoundpipeAudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 41D33CC925776B9100BD7ED5 /* Project object */;
+}

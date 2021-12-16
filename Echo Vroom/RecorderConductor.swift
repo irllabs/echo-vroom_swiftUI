@@ -98,7 +98,6 @@ class RecorderConductor: ObservableObject {
             fatalError("\(err)")
         }
         
-        recorder.
         let silencer = Fader(input, gain: 0)
         self.silencer = silencer
         
