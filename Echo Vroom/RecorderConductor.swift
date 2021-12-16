@@ -28,7 +28,7 @@ class RecorderConductor: ObservableObject {
     let engine = AudioEngine()
     let player = AudioPlayer()
     let mixer = Mixer()
-    //let variSpeed: VariSpeed
+    let variSpeed: VariSpeed
     var env: AmplitudeEnvelope
     //var plot: NodeOutputPlot
     
@@ -112,11 +112,11 @@ class RecorderConductor: ObservableObject {
         let silencer = Fader(input, gain: 0)
         self.silencer = silencer
         
-        //variSpeed = VariSpeed(player)
+        variSpeed = VariSpeed(player)
         
         mixer.addInput(silencer)
-        mixer.addInput(player)
-        // mixer.addInput(variSpeed)
+        //mixer.addInput(player)
+        mixer.addInput(variSpeed)
         env = AmplitudeEnvelope(mixer)
         //plot = NodeOutputPlot(mixer)
         //plot.plotType = .rolling
