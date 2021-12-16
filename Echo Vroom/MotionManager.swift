@@ -62,7 +62,7 @@ class MotionManager: ObservableObject {
                 self.accelX = accelData.acceleration.x
                 self.accelY = accelData.acceleration.y
                 self.accelZ = accelData.acceleration.z
-                self.recorderConductorHandler.variSpeed.rate = Float(Cookbook.scale(self.accelY, -1, 1, -1, 3))
+                //self.recorderConductorHandler.variSpeed.rate = Float(Cookbook.scale(self.accelY, -1, 1, -1, 3))
 
             }
 

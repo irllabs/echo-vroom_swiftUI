@@ -28,7 +28,7 @@ class RecorderConductor: ObservableObject {
     let engine = AudioEngine()
     let player = AudioPlayer()
     let mixer = Mixer()
-    let variSpeed: VariSpeed
+    //let variSpeed: VariSpeed
     var env: AmplitudeEnvelope
     //var plot: NodeOutputPlot
     
@@ -88,6 +88,17 @@ class RecorderConductor: ObservableObject {
         }
         // #endif
         
+        do {
+            Settings.bufferLength = .short
+            try AVAudioSession.sharedInstance().setPreferredIOBufferDuration(Settings.bufferLength.duration)
+            try AVAudioSession.sharedInstance().setCategory(.playAndRecord,
+                                                            options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let err {
+            print(err)
+        }
+        
+        
         guard let input = engine.input else {
             fatalError()
         }
@@ -101,11 +112,11 @@ class RecorderConductor: ObservableObject {
         let silencer = Fader(input, gain: 0)
         self.silencer = silencer
         
-        variSpeed = VariSpeed(player)
+        //variSpeed = VariSpeed(player)
         
         mixer.addInput(silencer)
         mixer.addInput(player)
-        mixer.addInput(variSpeed)
+        // mixer.addInput(variSpeed)
         env = AmplitudeEnvelope(mixer)
         //plot = NodeOutputPlot(mixer)
         //plot.plotType = .rolling
@@ -121,7 +132,7 @@ class RecorderConductor: ObservableObject {
         //plot.start()
 
         do {
-            variSpeed.rate = 1.0
+            //variSpeed.rate = 1.0
             try engine.start()
         } catch let err {
             print(err)
