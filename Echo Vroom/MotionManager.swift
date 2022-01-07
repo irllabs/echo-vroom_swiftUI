@@ -17,7 +17,7 @@ class MotionManager: ObservableObject {
     private var motionManager: CMMotionManager
     
     
-    // use as handle to modify the app'smain RecorderConductor class instance
+    // use as handle to modify the app's main RecorderConductor class instance
     var recorderConductorHandler : RecorderConductor
 
     @Published
@@ -33,6 +33,8 @@ class MotionManager: ObservableObject {
     var accelY: Double = 0.0
     @Published
     var accelZ: Double = 0.0
+    //@Published
+    //var playspeed: Float = 0.0
 
     init() {
         self.recorderConductorHandler = RecorderConductor()
@@ -62,7 +64,9 @@ class MotionManager: ObservableObject {
                 self.accelX = accelData.acceleration.x
                 self.accelY = accelData.acceleration.y
                 self.accelZ = accelData.acceleration.z
-                self.recorderConductorHandler.variSpeed.rate = Float(Cookbook.scale(self.accelY, -1, 1, -1, 3))
+                //self.playspeed = Float(Cookbook.scale(self.accelY, -1, 1, -1, 3))
+                //self.recorderConductorHandler.variSpeed.rate = Float(Cookbook.scale(self.accelY, -1, 1, -1, 3))
+                self.recorderConductorHandler.playSpeed = Float(Cookbook.scale(self.accelY, -1, 1, -3, 3))
 
             }
 

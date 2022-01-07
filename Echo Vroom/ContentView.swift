@@ -44,10 +44,9 @@ struct ContentView: View {
             //PlotView(view: conductor.plot)
             
             Spacer()
-//            Text("Accelerometer Data")
-//            Text("y: \(motion.accelY)")
-
-
+            Text("Play Speed")
+            Text("y: \(conductor.playSpeed)")
+            
         }
 
         .padding()

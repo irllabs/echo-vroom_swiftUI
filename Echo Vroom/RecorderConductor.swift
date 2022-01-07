@@ -19,7 +19,7 @@ import SwiftUI
 struct RecorderData {
     var isRecording = false
     var isPlaying = false
-    var playSpeed : Float = 1
+
 }
 
 class RecorderConductor: ObservableObject {
@@ -37,6 +37,12 @@ class RecorderConductor: ObservableObject {
     let recorder: NodeRecorder
     var silencer: Fader?
     
+    // For switchin buffers
+    var playDirection : Int = 1// 0 for reverse, 1 for forwrd
+    var playDirectionNew : Int = 1// used to detect direction changes
+    var recordingExists = false
+    var playDirectionChange: Int = 0// 0 for no, 1 for us
+    
     // For CoreMotion
     // For sensor data
     // @ObservedObject var motion: MotionManager
@@ -44,6 +50,64 @@ class RecorderConductor: ObservableObject {
 
         
     var buffer: AVAudioPCMBuffer
+    var bufferReversed: AVAudioPCMBuffer
+
+    @Published var playSpeed : Float {
+        didSet {
+//            Log("--------playSpeed:" + String(playSpeed))
+            variSpeed.rate = abs(playSpeed)
+            if ( playSpeed > 0) { playDirectionNew = 1 } else { playDirectionNew = 0 }
+            if (playDirectionNew == playDirection) { } else { playDirectionChange = 1}
+            
+//            Log("---playDirection:" + String(playDirection))
+//            Log("---playDirectionNew:" + String(playDirectionNew))
+            if (playDirectionChange == 1) {
+                Log("******PlayDirection Change")
+
+                if (recordingExists) {
+                    Log("***Recording Exists")
+                    if (playDirection == 1) {
+                        Log("*Forward")
+                        player.stop()
+                        player.scheduleBuffer(buffer, at: nil, options: .loops)
+                        player.play()
+                    } else {
+                        Log("*Reverse")
+                        player.stop()
+                        player.scheduleBuffer(bufferReversed, at: nil, options: .loops)
+                        player.play()
+
+                    }
+                }
+                playDirectionChange = 0
+
+            }
+            
+            playDirection = playDirectionNew
+        }
+    }
+
+//    @Published var playDirectionChange : Int {
+//        didSet {
+//            if (playDirectionChange == 1 ) {
+//                Log("***PlayDirection Change")
+//                if (data.recordingExists) {
+//                    if (playDirection == 1) {
+//                        player.stop()
+//                        player.scheduleBuffer(buffer, at: nil, options: .loops)
+//                        player.play()
+//                    } else {
+//                        player.stop()
+//                        player.scheduleBuffer(bufferReversed, at: nil, options: .loops)
+//                        player.play()
+//
+//                    }
+//                }
+//            }
+//
+//            playDirectionChange = 0
+//        }
+//    }
     
     @Published var data = RecorderData() {
         didSet {
@@ -56,16 +120,20 @@ class RecorderConductor: ObservableObject {
                 }
             } else {
                 recorder.stop()
+                //bufferReversed = buffer.reverse()!
+                recordingExists = true
             }
 
             if data.isPlaying {
                 if let file = recorder.audioFile {
                     if (recorder.isRecording) {
                         recorder.stop()
+                        recordingExists = true
                     }
     
                     buffer = try! AVAudioPCMBuffer(file: file)!
-                    player.scheduleBuffer(buffer, at: nil, options: .loops)
+                    bufferReversed = buffer.reverse()!
+                    player.scheduleBuffer(bufferReversed, at: nil, options: .loops)
                     player.play()
                 }
             } else {
@@ -124,7 +192,11 @@ class RecorderConductor: ObservableObject {
         engine.output = mixer
         
         buffer = Cookbook.loadBuffer(filePath: "Sounds/echo_baba3.wav")
+        bufferReversed = Cookbook.loadBuffer(filePath: "Sounds/echo_baba3.wav")
 
+        playSpeed  = 1
+
+//        playDirectionChange = 0
     }
     
     
